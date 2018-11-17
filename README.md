@@ -1,8 +1,5 @@
 <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/August/5b81cd05_soccer/soccer.png">
-# DRL - PPO - Soccer
-Training a two player soccer team using Proximal Policy Optimization (PPO) to beat a random team.
-
-# DRL - Multi-Agent DDPG Algorithm - Tennis Collaboration
+# DRL - Multi-Agent PPO - Soccer
 
 ## Overview
 Using the Unity agent/environment "Soccer", this deep reinforcement learning task trains a two player AI team to play soccer against an opposing "random team." Each team consists of a goalie and striker that are rewarded for each goal made against the opposing team and penalized when a goal is scored against them. The task is considered solved when the trained AI team consistently beats the random team. The random team is untrained and only takes random actions on the field.
