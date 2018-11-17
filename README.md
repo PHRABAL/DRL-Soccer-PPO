@@ -31,3 +31,5 @@ To reproduce this model on a Mac:
 4. Download the <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Soccer/Soccer.app.zip">custom Unity Soccer agent for Mac OSX</a> and save it in the p3_collab_compet folder of the Udacity repo.
 
 5. Open Jupyter Notebook and run the Soccer-PPO.ipynb file to train the agent.
+
+6. To watch the agents I trained play tennis, copy the 2 checkpoint files into the p3_collab_compet folder and execute all the notebook cells except sections 8 and 9 (the two sections above "Watch The Trained Agent.")
