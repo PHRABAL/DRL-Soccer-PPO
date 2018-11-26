@@ -1,16 +1,16 @@
 <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/August/5b81cd05_soccer/soccer.png">
 
-# DRL - Multi-Agent PPO - Soccer
+# DRL - Multi-Agent A2C with PPO - Soccer
 
 ## Overview
 Using the Unity agent/environment "Soccer", this deep reinforcement learning task trains a two player AI team to play soccer against an opposing "random team." Each team consists of a goalie and striker that are rewarded for each goal made against the opposing team and penalized when a goal is scored against them. The task is considered solved when the trained AI team consistently beats the random team. The random team is untrained and only takes random actions on the field.
 
-## PPO Algorithm
-As seen in the code, a policy gradient-based method is used to train the two agents (goalie and striker.) It employs the Proximal Policy Optimization (PPO) algorithm to optimize learning. Policy gradient-based methods with PPO are very effective in environments where there are a limited set of actions for an agent to take at each step. 
+## A2C with PPO
+As seen in the code, the Advantage Actor Critic (A2C) framework is used to train the two agents (goalie and striker.) It employs Proximal Policy Optimization (PPO) to optimize learning. Policy gradient-based methods like A2C with PPO are very effective in environments where there are a limited set of discrete actions for an agent to take at each step. 
 
-In the Soccer environment, each player can choose only 4 (goalie) or 6 (striker) different movements, such as forward, backwards, left, right and spin. Each agent "sees" a 180 degree view in front of them, including the various objects on the field and their relative placement and distance from the agent.
+In the Soccer environment, each player can choose only 4 (goalie) or 6 (striker) different actions, such as forward, backwards, left, right and spin. Each agent "sees" a 180 degree view in front of them, including the various objects on the field and their relative placement and distance from the agent.
 
-My implementation of Soccer uses one deep neural network for each agent (goalie and striker) that over time learns the highest probability action to choose in a given state. The agents play one round of soccer, collecting all of the experiences in that round, then use them to learn better actions for the next round. I have used PPO with a clipped surrogate function to limit how much the agents update their learning after each successive game. This avoids agents gathering a set of experiences in one round of play that "appear" to contain very effective actions and going too far in that direction, which risks them becoming stuck in a non-optimal long term pattern of play. This limiting (clipping) function is at the heart of the PPO algorithm and its effectiveness.
+My implementation of Soccer uses two deep neural networks (an actor and critic) for each agent (goalie and striker) that over time learns the most rewarding action to choose in a given state. The agents play one round of soccer, collecting all of the experiences in that round, then use them to learn better actions for the next round. I have used PPO with a clipped surrogate function to limit how much the agents update their learning after each successive game. This avoids agents gathering a set of experiences in one round of play that "appear" to contain very effective actions and going too far in that direction, which risks them becoming stuck in a non-optimal long term pattern of play. This limiting (clipping) function is at the heart of the PPO algorithm and its effectiveness.
 
 ## Setup Instructions
 
