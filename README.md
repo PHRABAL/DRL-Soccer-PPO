@@ -35,4 +35,6 @@ To reproduce this model on a Mac:
 
 5. Open Jupyter Notebook and run the Soccer-PPO.ipynb file to train the agent.
 
-6. To watch the agents I trained, copy the 2 actor checkpoint files into the p3_collab_compet folder and execute all the notebook cells from the top down to and including the hyperparamter settings under "Train The Agents", then skip the cells containing the training code and graph outputs, then run the final cell "Watch The Trained Agent."
+<strong>To train the agents yourself</strong>, simply execute the code from top down.
+
+<strong>To watch the agents I trained</strong>, copy the 2 actor checkpoint files into the p3_collab_compet folder and execute all the notebook cells from the top down to, and including, the hyperparamter settings under "Train The Agents", then skip the cells containing the training code and graph outputs, then run the final cell "Watch The Trained Agent."
